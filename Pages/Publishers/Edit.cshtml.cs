@@ -30,7 +30,7 @@ namespace Vicol_Lorena_Lab2.Pages.Publishers
                 return NotFound();
             }
 
-            var publisher =  await _context.Publisher.FirstOrDefaultAsync(m => m.Id == id);
+            var publisher =  await _context.Publisher.FirstOrDefaultAsync(m => m.ID == id);
             if (publisher == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace Vicol_Lorena_Lab2.Pages.Publishers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PublisherExists(Publisher.Id))
+                if (!PublisherExists(Publisher.ID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace Vicol_Lorena_Lab2.Pages.Publishers
 
         private bool PublisherExists(int id)
         {
-          return (_context.Publisher?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Publisher?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }
