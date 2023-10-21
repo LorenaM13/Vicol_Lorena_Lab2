@@ -11,7 +11,9 @@ namespace Vicol_Lorena_Lab2.Models
         [Display(Name = "Book Title")]
         public string Title { get; set; }
 
-        public string Author { get; set; }
+        //pct 38
+        public int? AuthorID { get; set; }
+        public Author? Author { get; set; } // navigation property
 
         [Column(TypeName = "decimal(6,2)")]
         public decimal Price {  get; set; }
@@ -20,6 +22,6 @@ namespace Vicol_Lorena_Lab2.Models
         public DateTime PublishingDate { get; set; }
 
         public int? PublisherID { get; set; }
-        public Publisher? Publisher { get; set; }
+        public Publisher? Publisher { get; set; } // navigation property
     }
 }
