@@ -49,7 +49,7 @@ namespace Vicol_Lorena_Lab2.Pages.Categories
                 Category category = CategoryData.Categories
                 .Where(i => i.ID == id.Value).Single();
                 CategoryData.BookCategories = category.BookCategories;
-                ;
+                
             }
         }
     }
